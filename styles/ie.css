@@ -1,0 +1,28 @@
+/* -----------------------------------------------------------------------------
+ * CONTENT 
+ * ----------------------------------------------------------------------------- */
+	.toDoList li .checkToDo {
+		z-index:1;
+		margin-right: -19px;
+		margin-left: 5px;
+	}
+	.toDoList li label {
+		position:relative;
+		z-index:2;
+	}
+	.toDoList li .btn {
+		width:25px;
+		height:25px;
+	}
+	.toDoList li .checkToDo + label {
+		background: none;
+		height: 17px;
+	}
+	
+	/* -------------------------------------------------------------------------
+	 * Inner pages
+	 * ------------------------------------------------------------------------- */
+	#content #submitTask {
+		margin-top:10px !important; 
+	}
+
