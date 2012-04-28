@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 9]>
+    <link href="styles/ie.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/json2.js"></script>
+	<![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+   
+    <div id="header">
+        <div id="header_content">
+            <div id="search">
+                <form action="" method="post" id="searchForm">
+                    <input id="searchField" name="search" type="search" placeholder="Search" />
+					<div id="btnHolder">
+                        <button type="button" id="searchBtn"/>Search</button>
+                    </div>
+                    <div class="clear"><!-- empty --></div>
+                </form>
+            </div>
+            <div id="logo"><a href="index.html">My to do list</a></div>
+            <div id="menu">
+                <ul id="menuList">
+                    <li><a href="index.html" id="menuHome" class="active">Home</a></li>
+                    <li><a href="javascript:void(0)" id="menuNew" onclick="ajaxRequest('new.html', 'pageTarget')">Add New </a></li>
+                    <li><a href="javascript:void(0)" id="menuDel" onclick="ajaxRequest('deleted.html', 'pageTarget')">Deleted</a></li>
+                    <li><a href="javascript:void(0)" id="menuFinish" onclick="ajaxRequest('finished.html', 'pageTarget')">Finished</a></li>
+                </ul>
+            </div>
+            <div class="clear"><!-- empty --></div>
+        </div>
+        <div class="clear"><!-- empty --></div>
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            <h1>Latest To Do’s</h1>
+            <form action="" method="post" class="checkListForm" id="checkListForm"></form>
+			<div id="pageTarget"></div>
+        </div>
+    </div>
+    <div id="footer">Footer</div>
+</body>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+</html>

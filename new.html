@@ -1,0 +1,21 @@
+<div class="innerHolder">
+	<div id="closePopup" onclick="javascript:history.go(0);">X</div>
+	<div id="addNew">
+		<h1>Add new to do</h1>
+		<form action="" method="post" class="addNew" id="addTaskForm">
+			<input type="text" name="title" placeholder="Title:" id="taskTitle"/><br/><br/>
+			<input type="text" name="day" placeholder="DD:" id="taskDay" class="" maxlength="2" style="width:50px;"/> - 
+			<input type="text" name="hours" placeholder="HH:" id="taskHours" class="" maxlength="2" style="width:50px;"/> -
+			<input type="text" name="minutes" placeholder="mm:" id="taskMin" maxlength="2" class="" style="width:50px;"/>
+			<div class="clear"><!-- empty --></div><br/>
+			Description<br/>
+			<textarea name="description" id="taskDesr"></textarea><br/>
+			<input type="submit" name="add" value="Add" id="submitTask" >
+			<div class="clear"><!-- empty --></div>
+		</form>
+	</div>
+	<div id="addedMessage">
+		Your new to do has been saved!
+		<div id="closeBtn" class="btnBig">Close</div>
+	</div>
+</div>	
