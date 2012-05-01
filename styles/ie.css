@@ -1,20 +1,24 @@
 /* -----------------------------------------------------------------------------
  * CONTENT 
  * ----------------------------------------------------------------------------- */
-	.toDoList li .checkToDo {
+	#toDoSearch li .checkToDo,
+	#toDoList li .checkToDo {
 		z-index:1;
 		margin-right: -19px;
 		margin-left: 5px;
 	}
-	.toDoList li label {
+	#toDoSearch li label,
+	#toDoList li label {
 		position:relative;
 		z-index:2;
 	}
-	.toDoList li .btn {
+	#toDoSearch li .btn,
+	#toDoList li .btn {
 		width:25px;
 		height:25px;
 	}
-	.toDoList li .checkToDo + label {
+	#toDoSearch li .checkToDo + label,
+	#toDoList li .checkToDo + label {
 		background: none;
 		height: 17px;
 	}
