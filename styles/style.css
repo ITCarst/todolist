@@ -243,6 +243,7 @@ ul, li {
 #wrapper {
     height:100%;
 }
+	#searchResults,
 	#content {
 		/*position:relative;*/
 		background:url('../img/content_bcg.png') repeat-y 55px top;
@@ -250,10 +251,12 @@ ul, li {
 	}
     #toDoList {
 	}
+	#toDoSearch li,
     #toDoList li {
         border-bottom:1px solid #d5e4e9;
         /*height:50px;*/
     }
+	#toDoSearch li .date,
     #toDoList li .date {
         float:left;
         font-size:20px;
@@ -265,6 +268,7 @@ ul, li {
 		padding-top:12px;
 		padding-bottom:10px;
     }
+	#toDoSearch li:nth-child(even) .liContent,
     #toDoList li:nth-child(even) .liContent {
 		background:#e7f0f4;
 		background: -webkit-gradient(linear, left top, left bottom, from(#e7f0f4), to(#ebf3f6)); /* for webkit browsers */
@@ -274,23 +278,28 @@ ul, li {
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#e7f0f4, endColorstr=#ebf3f6)"; /* IE8 + */
         box-shadow:inset 0px -1px 3px #e6e6e8;
     }
+	#toDoSearch li .description,
 	#toDoList li .description{
 		display:none;
 		padding-left:12px;
 		padding-bottom:15px;
 	}
+	#toDoSearch li .liContent,
 	#toDoList li .liContent{
 		height:100%;
 		margin-left:61px;
 		padding-right:60px;
 	}
+	#toDoSearch li .date span,
     #toDoList li .date span {
         display:block;
         font-size:11px;
     }
+	#toDoSearch li .toDoDescr,
     #toDoList li .toDoDescr {
         float:left;
     }
+	#toDoSearch li .checkToDo,
 	#toDoList li .checkToDo {
 		height: 16px;
 		width: 16px;
@@ -302,23 +311,28 @@ ul, li {
 		margin-right: -16px;
 		margin-left: 10px;
 	}
+	#toDoSearch li label,
 	#toDoList li label {
 		float: left;
 		line-height: 16px;
 		padding: 0 0 0 25px;
 		margin-top:15px;
 	}
+	#toDoSearch li .checkToDo + label,
 	#toDoList li .checkToDo + label {
 		background: url('../img/sprite.png') -180px -44px no-repeat;
 		height: 17px;
 	}
+	#toDoSearch li input[type=checkbox]:checked + label,
 	#toDoList li input[type=checkbox]:checked + label {
 		background-position: -180px -64px;
 	}
+	#toDoSearch li .btnHolder,
 	#toDoList li .btnHolder {
 		margin-top:13px;
 		float:right;
 	}
+	#toDoSearch li .btn,
 	#toDoList li .btn {
 		background:url('../img/sprite.png') left top no-repeat;
 		float:right;
@@ -328,23 +342,29 @@ ul, li {
 		margin-right:5px;
 		cursor:pointer;
 	}
+	#toDoSearch li .btn.expand,
 	#toDoList li .btn.expand {
 		background-position:-40px -47px;
 	}
+	#toDoSearch li .btn.edit,
 	#toDoList li .btn.edit {
 		background-position:-71px -47px;
 	}
+	#toDoSearch li .btn.delete,
 	#toDoList li .btn.delete {
 		background-position:-100px -47px;
 	}
 	/* -------------------------------------------------------------------------
 	 * Inner pages
 	 * ------------------------------------------------------------------------- */
+	#pageTarget .addNew,
 	#content .addNew {
 		font-size:16px;
 		width:550px;
 		margin-top:20px;
 	}
+	#pageTarget input[type="text"],
+	#pageTarget textarea,
 	#content input[type="text"],
 	#content textarea{
 		background:#f3f3f3;
@@ -364,13 +384,16 @@ ul, li {
 		color:#5d728a;
 		padding:0 10px;
 	}
+	#pageTarget textarea,
 	#content textarea{
 		min-height:150px;
 		height:auto;
 	}
+	#pageTarget input::-webkit-input-placeholder,
 	#content input::-webkit-input-placeholder {
 		color:#5d728a;
 	}
+	#pageTarget #submitTask,
 	#content #submitTask {
 		background:#ffffff;
 		background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2)); /* for webkit browsers */
@@ -453,7 +476,7 @@ ul, li {
 	top:105px;
 }
 #alertHolder .btnBig {
-	width:70px;
+	width:95px;
 	height:20px;
 	line-height:20px;
 	margin-top:20px;
@@ -534,3 +557,21 @@ ul, li {
 	margin-top:20px;
 }
 
+
+#searchResults {
+	display:none;
+}
+
+#popupSearch {
+	position: absolute;
+	top: 0px;
+	z-index:99;
+	width: 100%;
+	height:100%;
+	background:rgba(0, 0, 0, 0.5);
+}
+#popupSearch .innerHolder {
+	padding:10px;
+	width:175px;
+	margin-left:-140px;
+}
